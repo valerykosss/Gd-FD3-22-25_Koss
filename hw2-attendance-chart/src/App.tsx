@@ -35,8 +35,9 @@ function AttendanceTable() {
       const storedData = localStorage.getItem(LOCAL_STORAGE_KEY);
       return storedData ? JSON.parse(storedData) : initAttendanceStatusData;
     }
-    catch {
-      console.error('error')
+    catch(error) {
+      console.error('Ошибка при загрузке данных:', error);
+      return initAttendanceStatusData;
     }
   }
 
@@ -59,6 +60,8 @@ function AttendanceTable() {
     //предыдущий двумерный массив prevStatusArray
     setAttendanceStatusData((prevStatusArray) => {
       console.log('#prevStatus arrray', prevStatusArray);
+      //если localStorage был пустым?
+      if (!prevStatusArray[rowIndex]) return prevStatusArray;
 
       //копия предыдущий массива
       const newStatusArray = prevStatusArray.map((row) => [...row]);
@@ -67,6 +70,11 @@ function AttendanceTable() {
       return newStatusArray;
     });
   }
+
+  useEffect(() => {
+    setAttendanceStatusData(getStoredData());
+  }, []);
+
 
   return (
     <div>
