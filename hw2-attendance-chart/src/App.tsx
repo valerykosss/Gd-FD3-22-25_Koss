@@ -70,21 +70,20 @@ function AttendanceTable() {
       setDates(updatedDates);
       setAttendanceStatusData(updatedAttendanceData);
     }
-    setLoadingAddDate(false); // Закрыть индикатор загрузки
+    setLoadingAddDate(false);
   }
 
-
-function loadStoredData() {
-  try {
-    const storedData = localStorage.getItem(LOCAL_STORAGE_KEY);
-    if (storedData) {
-      return JSON.parse(storedData);
+  function loadStoredData() {
+    try {
+      const storedData = localStorage.getItem(LOCAL_STORAGE_KEY);
+      if (storedData) {
+        return JSON.parse(storedData);
+      }
+    } catch (error) {
+      console.error('load error:', error);
     }
-  } catch (error) {
-    console.error('load error:', error);
+    return { students: [], dates: [], attendanceStatusData: [] }; 
   }
-  return { students: [], dates: [], attendanceStatusData: [] }; 
-}
 
   function saveDataToStore(students: string[], dates: string[], attendanceStatusData: AttendanceData) {
     setLoading(true);
@@ -101,7 +100,6 @@ function loadStoredData() {
       setLoading(false)
     }, TIMEOUT_MS)
   }
-
 
   function handleAttendanceStatusData(rowIndex: number, colIndex: number) {
     //предыдущий двумерный массив prevStatusArray
