@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "id": "ebaa",
+      "title": "some title",
+      "body": "some body"
+    },
+    {
+      "id": "7897",
+      "title": "titleeeee",
+      "body": "bodyyyy (edited)"
+    }
+  ],
+  "comments": [
+    {
+      "postId": "ebaa",
+      "id": "1",
+      "name": "some comment name",
+      "email": "someemail@gmail.com",
+      "body": "lorem body"
+    },
+    {
+      "id": "d4c0",
+      "postId": "ebaa",
+      "name": "name",
+      "email": "email@gmail.com",
+      "body": "Comment text"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
