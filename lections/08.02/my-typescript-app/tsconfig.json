@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    //на какую целевую версию джс ориентироваться, если на браузеры старшие, то es3
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    //проверка типов строгая, писать типизацию необходимо
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve"
+  },
+  //что добавлять в TS
+  "include": [
+    "src"
+, "temp/file.ts"  ],
+  //что не добавлять в TS
+  "exclude": ["node_modules", "temp"]
+}
