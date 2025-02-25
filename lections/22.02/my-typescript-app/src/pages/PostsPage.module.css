@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+    background-color: bisque;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+}
+.cardTitle {
+    color: black;
+    text-transform: capitalize;
+}
+
+.cardBody {
+    font-size: 12px;
+}

@@ -1,0 +1,28 @@
+/* .MyWrapper {
+    background-color: darkolivegreen;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  } */
+
+.base {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.light {
+  background-color: rgb(219, 235, 190);
+  color: #000000;
+
+}
+
+.dark {
+  background-color: darkolivegreen;
+  color: #ffffff;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}

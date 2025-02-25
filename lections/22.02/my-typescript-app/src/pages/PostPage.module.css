@@ -1,0 +1,19 @@
+.postTitle {
+    text-transform: capitalize;
+}
+
+.postBody {}
+
+.wrapper {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.commentAuthor {
+    font-size: small;
+}
+.commentBody {
+    font-size: medium;
+}
