@@ -1,0 +1,119 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.slice__wrapper {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+.slice__title-add-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.slice__title {
+  margin-right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.slice__search{
+  margin-bottom: 20px;
+}
+
+.slice__search{
+  margin-right: 10px;
+  width: 25%;
+}
+
+.slice__list-wrapper {
+  overflow-y: scroll;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+div.slice__list-wrapper.note{
+  height: 450px;
+}
+
+div.slice__list-wrapper.note .slice__list-item {
+  width: 90%;
+}
+
+.slice__list-item {
+  border: 1px solid black;
+  padding: 10px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.item__title{ 
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.item__tag {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.item__text{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.item__date {
+  margin-bottom: 10px;
+}
+
+.item__btns-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
+
+.item__view-btn, 
+.item__edit-btn,
+.item__delete-btn {
+  margin-left: 5px;
+}
+
+.modal__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__dropdown {
+  margin-bottom: 10px;
+  width: 60%;
+}
+
+.modal__input {
+  margin-bottom: 10px;
+  width: 98%;
+}
+
+.modal__textarea{
+  margin-bottom: 30px;
+}
+
+.modal__btns-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__btns-wrapper button{
+  padding: 10px;
+  cursor: pointer;
+}
