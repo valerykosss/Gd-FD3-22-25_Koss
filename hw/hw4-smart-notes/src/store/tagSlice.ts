@@ -29,7 +29,6 @@ const tagSlice = createSlice({
           }
       },
       deleteTag(state, action: PayloadAction<TagType['id']>) {
-        //тут было ниже === action.payload.id
         const tagIndex = state.tags.findIndex(tag => tag.id === action.payload);
           if (tagIndex !== -1) {
           state.tags.splice(tagIndex, 1);

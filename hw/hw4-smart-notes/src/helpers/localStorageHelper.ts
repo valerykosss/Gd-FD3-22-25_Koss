@@ -25,17 +25,14 @@ function loadDataFromLocalStorage<T>(key: string) {
   return [];
 }
 
-// Функция сохранения заметок, конвертируя Date в строки
 export function saveNotesToLocalStorage(notes: NoteType[]) {
   saveDataToLocalStorage(LOCAL_STORAGE_NOTES_KEY, notes);
 }
 
-// Функция загрузки заметок, конвертируя строки обратно в Date
 export function loadNotesFromLocalStorage(): NoteType[] {
   return loadDataFromLocalStorage<NoteType[]>(LOCAL_STORAGE_NOTES_KEY) || [];
 }
 
-// Функции для тегов (тут преобразование не нужно, так как нет Date)
 export function saveTagsToLocalStorage(tags: TagType[]) {
   saveDataToLocalStorage(LOCAL_STORAGE_TAGS_KEY, tags);
 }

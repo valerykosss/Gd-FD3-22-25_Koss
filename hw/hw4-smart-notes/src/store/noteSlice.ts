@@ -36,7 +36,7 @@ const noteSlice = createSlice({
         }
       },
       deleteNote(state, action: PayloadAction<NoteType['id']>) {
-        //тут было ниже === action.payload.id
+        //тут было ниже в постах === action.payload.id
         const noteIndex = state.notes.findIndex(note => note.id === action.payload);
           if (noteIndex !== -1) {
             state.notes.splice(noteIndex, 1);
